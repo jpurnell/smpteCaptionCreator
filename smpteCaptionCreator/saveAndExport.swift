@@ -10,10 +10,10 @@ import Foundation
 
 func saveAndExport(exportString: String, exportFilePath: String){
     let exportFileURL = generateFileURL(exportFilePath: exportFilePath)
-    FileManager.default.createFile(atPath: exportFilePath, contents: NSData() as Data, attributes: nil)
+    FileManager.default.createFile(atPath: exportFilePath, contents: Data(), attributes: nil)
     var fileHandle: FileHandle? = nil
     do{
-        fileHandle = try FileHandle(forWritingTo: exportFileURL as URL)
+        fileHandle = try FileHandle(forWritingTo: exportFileURL)
     } catch {
         print("Error with fileHandle")
     }

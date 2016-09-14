@@ -8,7 +8,7 @@
 
 import Foundation
 
-func generateFileURL(exportFilePath: String) -> NSURL {
-    let exportFileURL = NSURL(fileURLWithPath: exportFilePath)
+func generateFileURL(exportFilePath: String) -> URL {
+    let exportFileURL = URL(fileURLWithPath: exportFilePath)
     return exportFileURL
 }
